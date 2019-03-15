@@ -19,7 +19,7 @@ export const record = async (message, providedFunc) => {
 	await providedFunc();
 	const endTime = performance.now();
 
-	// set the duration by subtracting the startTime from endtime
+	// set the duration by subtracting the startTime from endtime, and make it pretty
 	recordObject.duration = prettyMs(endTime - startTime, {
 		msDecimalDigits: 2,
 		secDecimalDigits: 2
@@ -32,9 +32,6 @@ export const record = async (message, providedFunc) => {
 };
 
 class SimpleReactProfiler extends Component {
-	componentDidMount() {
-		record("Custom messages will display here", async () => {});
-	}
 	render() {
 		return (
 			<Provider store={store}>
