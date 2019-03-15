@@ -1,31 +1,49 @@
 {
-	"name": "react-simple-profiler",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"bootstrap": "^4.3.1",
-		"pretty-ms": "^4.0.0",
-		"react": "^16.8.4",
-		"react-bootstrap": "^1.0.0-beta.5",
-		"react-dom": "^16.8.4",
-		"react-redux": "^6.0.1",
-		"react-scripts": "2.1.8",
-		"redux": "^4.0.1",
-		"redux-thunk": "^2.3.0"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	]
+  "name": "react-simple-profiler",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "pretty-ms": "^4.0.0",
+    "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "description": "This tool is used to clearly explain which functions are taking so long to complete.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terwort/react-simple-profiler.git"
+  },
+  "keywords": [
+    "react",
+    "simple",
+    "profiler"
+  ],
+  "author": "Zach Terwort",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terwort/react-simple-profiler/issues"
+  },
+  "homepage": "https://github.com/terwort/react-simple-profiler#readme"
 }
