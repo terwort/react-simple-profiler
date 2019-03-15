@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import configureStore from "./Store/configureStore";
+import configureStore from "./store/configureStore";
 import { Provider } from "react-redux";
-import TableContainer from "./Table/TableContainer";
 import prettyMs from "pretty-ms";
 import { createGuid } from "./helpers";
-import constants from "./Store/constants";
+import constants from "./store/constants";
+import TableContainer from "./table/TableContainer";
 
 const store = configureStore();
 
