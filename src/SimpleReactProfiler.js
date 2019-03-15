@@ -9,39 +9,39 @@ import constants from "./Store/constants";
 const store = configureStore();
 
 export const record = async (message, providedFunc) => {
-	const recordObject = {
-		id: createGuid(),
-		message
-	};
+  const recordObject = {
+    id: createGuid(),
+    message
+  };
 
-	// Record the time before, and after the function is called
-	const startTime = performance.now();
-	await providedFunc();
-	const endTime = performance.now();
+  // Record the time before, and after the function is called
+  const startTime = performance.now();
+  await providedFunc();
+  const endTime = performance.now();
 
-	// set the duration by subtracting the startTime from endtime, and make it pretty
-	recordObject.duration = prettyMs(endTime - startTime, {
-		msDecimalDigits: 2,
-		secDecimalDigits: 2
-	});
+  // set the duration by subtracting the startTime from endtime, and make it pretty
+  recordObject.duration = prettyMs(endTime - startTime, {
+    msDecimalDigits: 2,
+    secDecimalDigits: 2
+  });
 
-	store.dispatch({
-		type: constants.ADD_RECORD,
-		record: recordObject
-	});
+  store.dispatch({
+    type: constants.ADD_RECORD,
+    record: recordObject
+  });
 };
 
 class SimpleReactProfiler extends Component {
-	render() {
-		return (
-			<Provider store={store}>
-				<div className="simpleReactProfiler">
-					<h3>React Simple Profiler</h3>
-					<TableContainer />
-				</div>
-			</Provider>
-		);
-	}
+  render() {
+    return (
+      <Provider store={store}>
+        <div className="simpleReactProfiler">
+          <h3>React Simple Profiler</h3>
+          <TableContainer />
+        </div>
+      </Provider>
+    );
+  }
 }
 
 export default SimpleReactProfiler;
